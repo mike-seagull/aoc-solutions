@@ -1,3 +1,5 @@
+from util import get_input_from_file
+
 def part1(input_list):
     prev_depth = None
     count = 0
@@ -19,14 +21,10 @@ def part2(input_list):
         prev_sum = sum   
     print(count)
 
-def get_input_from_file(filename):
-    with open(filename, "r") as f:
-       lines = f.read()
-       return lines.splitlines()
 
 def main():
-    input = get_input_from_file("day1.txt")
-    # input = get_input_from_file("test.txt")
+    input = get_input_from_file("1.input.txt")
+    # input = get_input_from_file("1.test.txt")
     part1(input)
     part2(input)
 
